@@ -1,0 +1,10 @@
+1、创建父工程
+创建一个Maven项目，删掉src，添加<packaging>pom</packaging>
+2、创建子工程
+创建一个Maven项目，指定父工程
+3、响应体是遵循http协议的，直接使用可能产生乱码
+4、使用jackson实现对象与字符串之间的转换
+key和value都要用双引号包起来，中间用冒号隔开
+5、使用jquery发送ajax请求
+6、静态文件放到resource/static下面，resource下的资源会编译到类路径下
+7、使用注解创建对象的时候还是会调用构造方法，因此可以在构造方法中做一些处理

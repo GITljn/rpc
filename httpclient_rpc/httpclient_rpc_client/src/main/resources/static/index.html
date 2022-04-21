@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testJson</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+</head>
+<body style="text-align: center">
+    <button onclick="testJson()">测试post请求，参数的格式为json</button>
+    <script type="text/javascript">
+        function testJson() {
+            $.ajax({
+                "url": "http://localhost:80/json",
+                "method": "post",
+                "data": "[{\"username\":\"yyp\", \"password\":\"sy\"}, {\"username\":\"gdg\", \"password\":\"yq\"}]",
+                // 指定参数的类型，默认是参数名=参数值的字符串，即text/plain
+                "contentType": "application/json",
+                "dataType": "json",
+                "success" : function (response) {
+                    alert(response)
+                    console.log(response)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
